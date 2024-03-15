@@ -1,0 +1,133 @@
+:root {
+  /* Primary colors */
+  --white: hsl(0, 0%, 99%);
+  --light-pink: hsl(275, 100%, 97%);
+  --grayish-purple: hsl(292, 16%, 49%);
+  --dark-purple: hsl(292, 42%, 14%);
+  --purple: hsl(280, 86%, 40%);
+  --black: hsl(0, 0%, 8%);
+  --grey: hsl(0, 0%, 33%);
+
+  /* Typography */
+  --f-size: 16px;
+  --f-family: "Work Sans", sans-serif;
+  --f-weight-400: 400;
+  --f-weight-500: 500;
+  --f-weight-600: 600;
+
+  /* Dimensions */
+  --radius: 8px;
+}
+
+/* Reset */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Base */
+html {
+  font-size: var(--f-size);
+  font-family: var(--f-family);
+}
+
+body {
+  min-width: 100vw;
+  min-height: 100vh;
+  background-color: var(--grayish-purple);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+hr {
+  border-top: 1.5px solid var(--grey);
+  opacity: 10%;
+}
+
+/* .accordeon__panel--isHidden {
+  display: none;
+} */
+
+/* Styles */
+.faq {
+  width: min(90%, 22rem);
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: space-around;
+  margin-inline: auto;
+  background-color: var(--white);
+  border-radius: var(--radius);
+  padding: 2rem;
+
+  /* FAQ header */
+  & .faq__header {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 2rem;
+    width: 100%;
+    padding-block-end: 1rem;
+
+    & img {
+      width: 1.5rem;
+      height: 1.5rem;
+    }
+  }
+
+  /* FAQ Body */
+  & .faq__container {
+    width: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 1rem;
+
+    /* accordeon */
+    & .accordeon {
+      width: 100%;
+
+      & header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        cursor: pointer;
+        width: 100%;
+
+        & h3 {
+          font-weight: var(--f-weight-600);
+          font-size: 1rem;
+          width: 80%;
+          transition: all 0.3s ease-in-out;
+
+          &:hover {
+            color: var(--purple);
+          }
+        }
+
+        & img {
+          width: 2rem;
+          height: 2rem;
+        }
+      }
+
+      & .accordeon__panel {
+        font-weight: var(--f-weight-400);
+        font-size: 1rem;
+        transition: all 0.5s;
+        max-height: 0;
+        overflow: hidden;
+
+        & p {
+          color: var(--grey);
+          font-size: 0.9rem;
+          line-height: 1.4;
+        }
+      }
+    }
+  }
+}
