@@ -68,6 +68,7 @@ hr {
   background-color: var(--white);
   border-radius: var(--radius);
   padding: 2rem;
+  box-shadow: 6px 1px 16px hsla(0, 0%, 8%, 0.2);
 
   /* FAQ header */
   & .faq__header {
