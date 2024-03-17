@@ -141,3 +141,17 @@ hr {
     }
   }
 }
+
+@media only screen and (min-width: 768px) {
+  body {
+    background-image: url("/assets/images/background-pattern-desktop.svg");
+  }
+
+  .faq {
+    width: min(90%, 40rem);
+  }
+
+  h1 {
+    font-size: 3rem;
+  }
+}
