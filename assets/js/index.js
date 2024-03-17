@@ -59,7 +59,7 @@ document.addEventListener("DOMContentLoaded", () => {
   function showAccordeon(arg) {
     arg.style.maxHeight = arg.style.maxHeight ? null : arg.scrollHeight + "px";
 
-    arg.style.paddingBlockStart = arg.style.paddingBlockStart ? null : "1rem";
+    arg.style.marginBlockStart = arg.style.marginBlockStart ? null : "0.3rem";
   }
 
   // Change icon after click
