@@ -37,7 +37,11 @@ html {
 body {
   min-width: 100vw;
   min-height: 100vh;
-  background-color: var(--grayish-purple);
+  background-color: var(--light-pink);
+  background-image: url("/assets/images/background-pattern-mobile.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center top;
   display: flex;
   flex-direction: column;
   justify-content: center;
