@@ -37,7 +37,11 @@ html {
 body {
   min-width: 100vw;
   min-height: 100vh;
-  background-color: var(--grayish-purple);
+  background-color: var(--light-pink);
+  background-image: url("/assets/images/background-pattern-mobile.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center top;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -91,6 +95,12 @@ hr {
     & .accordeon {
       width: 100%;
 
+      &:focus-visible {
+        outline: 2px solid var(--purple);
+        outline-offset: 0.25rem;
+        border-radius: var(--radius);
+      }
+
       & header {
         display: flex;
         justify-content: space-between;
@@ -129,5 +139,19 @@ hr {
         }
       }
     }
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  body {
+    background-image: url("/assets/images/background-pattern-desktop.svg");
+  }
+
+  .faq {
+    width: min(90%, 40rem);
+  }
+
+  h1 {
+    font-size: 3rem;
   }
 }
